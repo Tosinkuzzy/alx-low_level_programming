@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 #ifndef FILE_MAIN
 #define FILE_MAIN
-=======
-#ifndef MAIN_H
-#define MAIN_H
->>>>>>> cd3fcd330cf4c12a91020ef18079e81c1442b189
 
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
@@ -17,10 +12,5 @@ char *cap_string(char *);
 char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
-<<<<<<< HEAD
-=======
-char *infinite_add(char *n1, char *n2, char *r, int size_r);
-void print_buffer(char *b, int size);
->>>>>>> cd3fcd330cf4c12a91020ef18079e81c1442b189
 
 #endif
