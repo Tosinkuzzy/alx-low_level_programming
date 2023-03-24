@@ -1,9 +1,9 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - check the code for ALX School students.
+ * main - check the code for Alx School students.
+ * description: NULL if ac == 0 or av == NULL
  *
  * Return: Always 0.
  */
