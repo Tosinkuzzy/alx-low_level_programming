@@ -1,13 +1,20 @@
+/*
+ * File: 4-puts.c
+ * Auth: Tosin
+ */
+
 #include <stdio.h>
-#include <string.h>
 
 /**
- * main - Entry point
- * 
- * Return 0 Always
+ * main - Prints "Programming is like building a multilingual
+ *                puzzle, followed by a new line.
+ *
+ *  Return: Always 0
  */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
+
 	return (0);
 }
