@@ -6,15 +6,15 @@
 #include <stdio.h>
 
 /**
- * main - Prints "With proper grammar, but the outcome is
- *                a piece of art, followed by a new line.
+ * main - Prints the phrase With proper grammar,
+ *  but the outcome is a piece of art, followed by a new line.
  *
- * Return: Always 0.
+ * Return: Always 0 if exited properly, non-zero otherwise.
  */
 
 int main(void)
 {
-printf("%s", "With proper grammar, but the outcome is a piece of art,\n");
+printf("%s", "with proper grammar, but the outcome is a piece of art,\n");
 
 	return (0);
 }
