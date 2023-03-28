@@ -1,3 +1,7 @@
+/*
+ * File: 3-array_range.c
+ * Auth: Tosinkuzzy
+ */
 #include <stdlib.h>
 #include "main.h"
 

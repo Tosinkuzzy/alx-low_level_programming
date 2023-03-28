@@ -1,3 +1,8 @@
+/*
+ * File: 3-main.c
+ * Auth: Tosinkuzzy
+ */
+
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
