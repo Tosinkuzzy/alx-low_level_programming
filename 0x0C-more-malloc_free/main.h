@@ -1,3 +1,8 @@
+/*
+ * File: MAIN_H
+ * Auth: Tosinkuzzy
+ */
+
 #ifndef MAIN_H
 #define MAIN_H
 
