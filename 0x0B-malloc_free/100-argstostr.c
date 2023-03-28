@@ -1,10 +1,15 @@
+/*
+ * File: 100-argstostr.c
+ * Auth: Tosin
+ */
+
 #include "main.h"
 #include <stdlib.h>
 /**
-* argstostr - main entry
-* @ac: int input
-* @av: double pointer array
-* Return: 0
+* argstostr - concatenates all the arguments of your program.
+* @ac: argument count
+* @av: argument vector
+* Return: A pointer to a new string, or Null if it fails 
 */
 char *argstostr(int ac, char **av)
 {
@@ -24,7 +29,6 @@ if (str == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
 {
-
 for (n = 0; av[i][n]; n++)
 {
 str[r] = av[i][n];
