@@ -4,23 +4,35 @@
  */
 
 #include "main.h"
-int is_divisible(int num, int div);
-int is_prime_number(int n);
-
+#include <stddef.h>
 /**
- * is_divisible - check if a number is divisible
- * @num: The number to be checked.
- * @div: The divisor.
+ * comparar - function tht returns the power of number
+ * @n: original number
+ * @y: counter to compare multiplication
  *
- * Return: if the number is divisible - 0
- *      if the number is not divisible - 1
+ * Return: square root
  */
-int is_divisible(int num, int div)
+int comparar(int n, int y)
 {
-	if(num % div == 0)
-		return(0);
-	if(div == / 2)
-		return (1);
+int count = 0;
 
-	return (is_divisible(num,div + 1));
+if (y <= n)
+{
+if (n % y == 0)
+count++;
+return (count + comparar(n, y + 1));
+}
+return (count);
+}
+/**
+ * is_prime_number - return 1 if is number prime
+ * @n: number to evaluate
+ * return: 1 or 0
+ */
+int is_prime_number(int n)
+{
+if (comparar(n, 1) == 2)
+return (1);
+else
+return (0);
 }

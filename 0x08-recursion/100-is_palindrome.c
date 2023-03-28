@@ -26,7 +26,7 @@ return (l);
  * @i: original number
  * @l: counter to compare multiplication
  * @s: string
- * Return: square root 
+ * Return: square root
  */
 int comparar(int i, int l, char *s)
 {
