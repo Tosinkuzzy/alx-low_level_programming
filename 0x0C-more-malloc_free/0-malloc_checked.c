@@ -1,3 +1,8 @@
+/*
+ * File: 0-malloc_checked.c
+ * Auth: Tosinkuzzy
+ */
+
 #include <stdlib.h>
 #include "main.h"
 
@@ -9,13 +14,10 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
+void *i;
 
-	ptr = malloc(b);
-
-	if (ptr == NULL)
-		exit(98);
-
-	return (ptr);
+i = malloc(b);
+if (i == NULL)
+	exit(98);
+return (i);
 }
-
