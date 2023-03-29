@@ -2,22 +2,22 @@
  * File: 0-malloc_checked.c
  * Auth: Tosinkuzzy
  */
-
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * *malloc_checked - allocates memmory using malloc
- * @b: number of bytes to allocate
+ * malloc_checked - cause normal process termination with a status value of 98
  *
- * Return: A pointer to the allocated memory
+ * @b: allocated memory
+ *
+ * Return: a pointer to the allocated memory
  */
 void *malloc_checked(unsigned int b)
 {
-void *mem = malloc(b);
+	void *i;
 
-if (mem == NULL)
-exit(98);
+	i = malloc(b);
+	if (i == NULL)
+		exit(98);
+	return (i);
 
-return (mem);
 }
