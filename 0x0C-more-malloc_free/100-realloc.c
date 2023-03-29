@@ -2,7 +2,6 @@
  * File: 100-realloc.c
  * Auth: Tosinkuzzy
  */
-
 #include "main.h"
 
 /**
