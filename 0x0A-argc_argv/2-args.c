@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  * Description: Prints all arguments it receives
- * @argc: No of command line arguments
+ * @argc: Number of command line arguments
  * @argv: Array name
  * Return: 0
  */
