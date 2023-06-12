@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  * Description: Prints the number of arguements passed
- * @argc: No of command line arguments
+ * @argc: Number of command line arguments
  * @argv: Array name
  * Return: 0
  */
