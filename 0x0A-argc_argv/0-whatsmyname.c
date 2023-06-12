@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  * Description: Prints the name of the program
- * @argc: No of command line arguments
+ * @argc: Nnumber of command line arguments
  * @argv: Array name
  * Return: 0
  */
