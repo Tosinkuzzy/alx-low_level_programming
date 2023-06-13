@@ -6,7 +6,7 @@
 /**
  * main - Entry point
  * Description: Adds positive numbers
- * @argc: No of command line arguments
+ * @argc: Nnumber of command line arguments
  * @argv: Array name
  * Return: 0
  */
