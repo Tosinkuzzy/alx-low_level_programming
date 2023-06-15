@@ -1,6 +1,6 @@
 /*
  * File: Create_arrays
- * Auth: Tosin
+ * Author: Tosinkuzzy
  */
 
 #include <stdlib.h>
@@ -10,7 +10,7 @@
  *
  * @size: The size of array
  *
- * @c: The char to fll in the array
+ * @c: The char to flll in the array
  *
  * Return: The array filled
  */
