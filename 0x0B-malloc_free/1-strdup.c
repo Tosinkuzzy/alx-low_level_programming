@@ -1,6 +1,6 @@
 /*
  * File: 1-strdup.c
- * Aith: Tosin
+ * Author: Tosinkuzzy
  */
 
 #include <stdio.h>
