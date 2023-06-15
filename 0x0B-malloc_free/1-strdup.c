@@ -18,9 +18,11 @@ int n;
 
 if (str == NULL)
 return (NULL);
+{
 for (n = 0; str[n] != '\0';
 n++)
 strnew = (char *)malloc(n + 1 * sizeof(char));
+}
 if (strnew != NULL)
 {
 for (i = 0; str[i] != '\0';
