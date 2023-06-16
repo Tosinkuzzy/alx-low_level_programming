@@ -1,6 +1,6 @@
 /*
  * File: str_concat
- * Auth: Tosin
+ * Author: Tosinkuzzy
  */
 #include "main.h"
 #include <stdlib.h>
