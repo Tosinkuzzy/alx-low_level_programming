@@ -1,6 +1,6 @@
 /*
  * File: 100-realloc.c
- * Auth: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "main.h"
 
