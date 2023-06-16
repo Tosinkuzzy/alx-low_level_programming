@@ -1,6 +1,6 @@
 /*
  * File: 100-argstostr.c
- * Auth: Tosin
+ * Author: Tosinkuzzy
  */
 
 #include "main.h"
