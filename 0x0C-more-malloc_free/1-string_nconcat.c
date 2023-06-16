@@ -1,3 +1,8 @@
+/*
+ * File: 1-string_nconcat.c
+ * Author: Tosinkuzzy
+ */
+
 #include "main.h"
 
 /**
