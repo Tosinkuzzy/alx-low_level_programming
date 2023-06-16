@@ -1,6 +1,6 @@
 /*
  * File: 0-main.c
- * Auth: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 
 #include "main.h"
