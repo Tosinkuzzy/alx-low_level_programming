@@ -1,6 +1,6 @@
 /*
  * File: 2-calloc.c
- * Auth: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 
 #include "main.h"
