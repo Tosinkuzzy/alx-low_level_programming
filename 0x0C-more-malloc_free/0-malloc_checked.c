@@ -1,6 +1,6 @@
 /*
  * File: 0-malloc_checked.c
- * Auth: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "main.h"
 
