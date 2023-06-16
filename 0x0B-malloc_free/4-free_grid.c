@@ -1,6 +1,6 @@
 /*
  * File: 4-free_grid.c
- * Auth: Tosin
+ * Author: Tosinkuzzy
  */
 
 #include <stdio.h>
