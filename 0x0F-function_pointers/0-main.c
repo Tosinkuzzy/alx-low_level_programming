@@ -1,4 +1,7 @@
-
+/*
+ * File: 0-main.c
+ * Author: Tosinkuzzy
+ */
 #include <stdio.h>
 #include "function_pointers.h"
 
