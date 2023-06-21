@@ -1,3 +1,8 @@
+/*
+ * File: 2-main.c
+ * Author: Tosinkuzzy
+ */
+
 #include <stdio.h>
 /**
 * main - prints the name of the file *
