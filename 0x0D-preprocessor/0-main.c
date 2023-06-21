@@ -1,3 +1,8 @@
+/*
+ * File: 0-object_like_macro.h
+ * Author: Tosinkuzzy
+ */
+
 #include "0-object_like_macro.h"
 #include "0-object_like_macro.h"
 #include <stdio.h>
