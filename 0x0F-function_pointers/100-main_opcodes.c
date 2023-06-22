@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stddef.h>
 #include <stdlib.h>
 
 /**
- * main - prints its own opcodes
+ * main - Entry p
+ * des:  prints its own opcodes
  * @argc: number of arguments
  * @argv: array of arguments
  *
@@ -16,24 +18,19 @@ char *arr;
 if (argc != 2)
 {
 printf("Error\n");
-exit(1);
+return (1);
 }
 bytes = atoi(argv[1]);
 
 if (bytes < 0)
 {
 printf("Error\n");
+return (2);
 }
-arr = (char *)
-main;
+arr = (char *)main;
 for (i = 0; i < bytes; i++)
 {
-if (i == bytes - 1)
-{
-printf("%02hhx\n", arr[i]);
-break;
-}
-printf("%02hhx ", arr[i]);
+printf("%02hhx%c", arr[i], i < bytes -1 ? ' ' : '\n');
 }
 return (0);
 }
