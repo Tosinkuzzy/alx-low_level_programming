@@ -5,8 +5,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _puts_recursion - Prints a string, followed by a new line.
- * @s: The string to be printed.
+ * _puts_recursion - Entry p
+ * des: Print a string, followed by a new line.
+ * @s: character
  */
 void _puts_recursion(char *s)
 {
