@@ -10,7 +10,7 @@
  * @n: original number
  * @y: counter to compare multiplication
  *
- * Return: square root
+ * Return: 1 , 0 otherwise.
  */
 int comparar(int n, int y)
 {
@@ -27,7 +27,8 @@ return (count);
 /**
  * is_prime_number - return 1 if is number prime
  * @n: number to evaluate
- * return: 1 or 0
+ *
+ * Return: 1 or 0
  */
 int is_prime_number(int n)
 {
