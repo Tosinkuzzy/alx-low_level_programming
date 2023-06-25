@@ -31,9 +31,13 @@ return (l);
 int comparar(int i, int l, char *s)
 {
 if (i >= l)
+{
 return (1);
+}
 else if (s[i] == s[l])
+{
 return (comparar(i + 1, l - 1, s));
+}
 else
 return (0);
 }
