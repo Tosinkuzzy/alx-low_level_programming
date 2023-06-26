@@ -1,6 +1,6 @@
 /*
  * File: 4-new_dog.c
- * Auth: Tosin
+ * Auth: Tosinkuzzy
  */
 
 #include "dog.h"
