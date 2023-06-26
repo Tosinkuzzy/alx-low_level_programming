@@ -1,7 +1,3 @@
-/*
- * File: MAIN_H
- * Author: Tosinkuzzy
- */
 
 #ifndef MAIN_H
 #define MAIN_H
