@@ -1,6 +1,6 @@
 /*
  * File: 0-print_list.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "lists.h"
 

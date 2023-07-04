@@ -1,6 +1,6 @@
 /*
  * File: 100-first.c
- * @G: tosinkuzzy
+ * Author: tosinkuzzy
  */
 #include "stdio.h"
 

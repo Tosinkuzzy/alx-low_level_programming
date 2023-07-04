@@ -1,6 +1,6 @@
 /*
  * File: 2-add_node.c
- * @: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 
 #include "lists.h"
@@ -23,21 +23,17 @@ if (!new)
 {
 return (NULL);
 }
-/* Duplicate the string */
 new->str = strdup(str);
 if (new->str == NULL)
 {
 free(new);
 return (NULL);
 }
-/* Count the number of characters within square brackets */
 len = 0;
 while (str[len])
 len++;
-/* Set next pointer of new node to current head */
 new->next = *head;
 new->len = len;
-/* Set head to point to the new node */
 *head = new;
 
 return (new);

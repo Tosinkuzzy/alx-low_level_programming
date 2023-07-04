@@ -1,6 +1,6 @@
 /*
  * File: 1-list_len.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "lists.h"
 
@@ -17,9 +17,7 @@ size_t count_nodes = 0;
 
 while (h != NULL)
 {
-/* Increment count for each node */
 count_nodes++;
-/* Next node */
 h = h->next;
 }
 return (count_nodes);

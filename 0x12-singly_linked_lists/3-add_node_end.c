@@ -1,6 +1,6 @@
 /*
  * File: 3-add_node_end.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "lists.h"
 
@@ -21,29 +21,24 @@ return (NULL);
 new = malloc(sizeof(list_t));
 if (!new)
 return (NULL);
-/* Duplicate the string */
 new->str = strdup(str);
 if (!new->str)
 {
 free(new);
 return (NULL);
 }
-/* Count the number of characters within square brackets */
 new->len = strlen(str);
 new->next = NULL;
-/* If the list is empty, the new node becomes the head */
 if (!*head)
 {
 *head = new;
 return (new);
 }
 current = *head;
-/* Traverse the list until the last node is reached */
 while (current->next)
 {
 current = current->next;
 }
-/* Add the new node to the end of the list */
 current->next = new;
 return (new);
 }

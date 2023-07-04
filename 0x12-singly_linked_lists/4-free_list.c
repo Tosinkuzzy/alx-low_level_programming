@@ -1,6 +1,6 @@
 /*
  * File: 4-free_list.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "lists.h"
 
