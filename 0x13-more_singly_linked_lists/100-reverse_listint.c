@@ -1,6 +1,6 @@
 /*
  * File: 100-reverse_listint.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 
 #include "lists.h"

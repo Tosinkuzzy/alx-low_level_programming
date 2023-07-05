@@ -23,7 +23,9 @@ int n;
 struct listint_s *next;
 } listint_t;
 
-/***** PROTOTYPES *****/
+/*
+ * PROTOTYPES
+ */
 
 int _putchar(char c);
 size_t print_listint(const listint_t *h);

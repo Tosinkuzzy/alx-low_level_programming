@@ -1,3 +1,8 @@
+/*
+ * File: 6-pop_listint.c
+ * Author: Tosinkuzzy
+ */
+
 #include "lists.h"
 
 /**

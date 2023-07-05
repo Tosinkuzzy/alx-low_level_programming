@@ -1,3 +1,8 @@
+/*
+ * File: 8-sum_listint.c
+ * Author: Tosinkuzzy
+ */
+
 #include "lists.h"
 
 /**

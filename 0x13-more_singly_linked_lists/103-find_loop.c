@@ -1,12 +1,12 @@
 /*
  * File: 103-find_loop.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "lists.h"
 
 /**
  * find_listint_loop - Entry point
- * Descript: Find the loop in a linked list.
+ * Description: Find the loop in a linked list.
  * @h: Pointer to the head of the linked list
  *
  * Return: Address of node where the loop starts, or NULL if there is no loop

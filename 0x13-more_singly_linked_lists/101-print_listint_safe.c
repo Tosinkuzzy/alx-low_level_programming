@@ -1,12 +1,12 @@
 /*
  * File: 101-print_listint_safe.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 #include "lists.h"
 
 /**
  * print_listint_safe - Entry point
- * Descript: Prints a listint_t linked list.
+ * Description: Prints a listint_t linked list.
  * @h: Pointer to the first node of the linked list
  *
  * Return: The number of nodes in the list
@@ -15,7 +15,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 const listint_t *current, *vets;
-size_t counter = 0;
+size_t count = 0;
 
 if (!head || !head->next)
 {
@@ -25,7 +25,7 @@ current = head;
 while (current)
 {
 printf("[%p] %d\n", (void *)current, current->n);
-counter++;
+count++;
 if (current > current->next)
 {
 current = current->next;
@@ -37,5 +37,5 @@ printf("-> [%p] %d\n", (void *)vets, vets->n);
 break;
 }
 }
-return (counter);
+return (count);
 }

@@ -1,3 +1,8 @@
+/*
+ * File: 3-add_nodeint_end.c
+ * Author: Tosinkuzzy
+ */
+
 #include "lists.h"
 
 /**
