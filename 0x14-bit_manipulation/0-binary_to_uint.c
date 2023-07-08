@@ -1,13 +1,13 @@
 /*
  * File: 0-binary_to_uint.c
- * @G: Tosinkuzzy
+ * Author: Tosinkuzzy
  */
 
 #include "main.h"
 
 /**
  * binary_to_uint - Entry point
- * Descript: Converts a binary number to an unsigned int
+ * Description: Converts a binary number to an unsigned int
  * @b: Pointer to a string of 0 and 1 chars
  *
  * Return: The converted number, or 0 if b is NULL or there's a non 0 or 1 char

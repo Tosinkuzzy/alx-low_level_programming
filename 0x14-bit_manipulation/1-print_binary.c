@@ -1,14 +1,14 @@
 /*
- * File: 1-print_binary.c
- * @G: Tosinkuzzy
- */
+* File: 1-print_binary.c
+* Author: Tosinkuzzy
+*/
 #include "main.h"
 
 /**
- * print_binary - Entry point
- * Descript: Prints the binary representation of a number
- * @n: Printed in binary format
- */
+* print_binary - Entry point
+* Description: Prints the binary representation of a number
+* @n: Printed in binary format
+*/
 
 void print_binary(unsigned long int n)
 {
@@ -20,7 +20,7 @@ i++;
 }
 while (i >= 0)
 {
-if ((n >> i) & 1)
+if ((n >> i) &1)
 {
 _putchar('1');
 }
