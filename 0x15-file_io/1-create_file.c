@@ -1,8 +1,13 @@
+/*
+ * File: 1-create_file.c
+ * Author: Tosinkuzzy
+ */
+
 #include "main.h"
 
 /**
  * create_file - Entry point
- * Descript: Create a file.
+ * Description: Create a file.
  * @fileName: Name of the file to be read
  * @text_content: A NULL terminated string to write to the file
  *

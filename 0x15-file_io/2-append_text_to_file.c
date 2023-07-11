@@ -1,8 +1,13 @@
+/*
+ * File: 2-append_text_to_file.c
+ * Author: Tosinkuzzy
+ */
+
 #include "main.h"
 
 /**
  * append_text_to_file - Entry point
- * Descript: Appends text at the end of a file
+ * Description: Appends text at the end of a file
  * @fileName: The name of the file to be read
  * @text_content: The NULL terminated string to add at the end of the file
  *
@@ -29,6 +34,3 @@ return (-1);
 close(fd);
 return (1);
 }
-/*
- * Githubuser: Tosinkuzzy
- */

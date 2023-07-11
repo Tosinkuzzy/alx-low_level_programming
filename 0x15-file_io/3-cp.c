@@ -1,3 +1,8 @@
+/*
+ * File: 3-cp.c
+ * Author: Tosinkuzzy
+ */
+
 #include "main.h"
 
 char *allocate_buffer(char *fileName);
@@ -5,7 +10,7 @@ void close_file_descriptor(int fd);
 
 /**
  * allocate_buffer - Entry point
- * Descript: Allocates bytes to be used by the buffer.
+ * Description: Allocates bytes to be used by the buffer.
  * @fileName: Name of the file
  *
  * Return: Buffer allocated
@@ -41,7 +46,7 @@ exit(100);
 
 /**
  * main - Entry point
- * Descript: Copies content within file to another file
+ * Description: Copies content within file to another file
  * @argc: Number of arguments
  * @argv: Array of strings
  *
@@ -61,8 +66,7 @@ buffer = allocate_buffer(argv[2]);
 file_from = open(argv[1], O_RDONLY);
 my_read = read(file_from, buffer, 1024);
 file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
-do
-{
+do {
 if (file_from == -1 || my_read == -1)
 {
 dprintf(STDERR_FILENO,
@@ -85,7 +89,5 @@ free(buffer);
 close_file_descriptor(file_from);
 close_file_descriptor(file_to);
 return (0);
+
 }
-/*
- * Githubuser: Tosinkuzzy
- */

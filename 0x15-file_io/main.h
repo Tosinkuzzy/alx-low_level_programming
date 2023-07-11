@@ -2,7 +2,10 @@
 #define MY_MAIN_H
 
 
-/* Libraries */
+/* 
+ * Libraries
+ */
+
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>

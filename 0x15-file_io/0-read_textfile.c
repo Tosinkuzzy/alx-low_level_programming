@@ -1,15 +1,20 @@
+/*
+ * File: 0-read_textfile.c
+ * Author: Tosinkuzzy
+ */
+
 #include "main.h"
 
 /**
  * read_textfile - Entry point
- * Descript: Reads a text file and prints it to the POSIX standard output
- * @fileName: Name of the file to be read
+ * Description: Reads a text file and prints it to the POSIX standard output
+ * @filename: Name of the file to be read
  * @letters: The number of letters it should read and print
  *
  * Return: The actual number of letters it could read and print
  * if the file can not be opened or read, return 0
  * if fileName is NULL return 0
- * if write fails or does not write the expected amount of bytes, return 0
+ * if write fails or does not write the expected amount of bytes, return 0.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -35,7 +40,3 @@ close(fd);
 
 return (my_write);
 }
-/*
- * FILE: 0-read_textfile.c
- * Github: Tosinkuzzy
- */
