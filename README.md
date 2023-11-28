@@ -1,7 +1,9 @@
 [alx-low_level_programming]
+
 This repository contains C programming projects done as part of the ALX Software Engineering program. The projects cover topics such as variables, data structures, algorithms, loops, functions, pointers, and more.
 
 [Table of Contents]
+
 {Installation}
 {Usage}
 {Projects}
@@ -13,6 +15,7 @@ sudo apt-get update
 sudo apt-get install gcc
 
 [Usage]
+
 To compile a C file, use the following command:
 
 gcc -Wall -Werror -Wextra -pedantic file.c -o file
@@ -22,6 +25,7 @@ To run the executable file, use the following command:
 ./file
 
 [Projects]
+
 The repository contains the following projects:
 
 0x00-hello_world: Introduction to C programming language and gcc compiler.
