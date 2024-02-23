@@ -11,24 +11,24 @@
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-    shash_table_t *new_table;
-    unsigned long int index;
+shash_table_t *new_table;
+unsigned long int index;
 
-    new_table = (shash_table_t *) malloc(sizeof(shash_table_t));
-    if (new_table == NULL)
-        return (NULL);
-    new_table->size = size;
-    new_table->shead = NULL;
-    new_table->stail = NULL;
-    new_table->array = (shash_node_t **) malloc(sizeof(shash_node_t *) * size);
-    if (new_table->array == NULL)
-    {
-        free(new_table);
-        return (NULL);
-    }
-    for (index = 0; index < size; index++)
-        (new_table->array)[index] = NULL;
-    return (new_table);
+new_table = (shash_table_t *) malloc(sizeof(shash_table_t));
+if (new_table == NULL)
+return (NULL);
+new_table->size = size;
+new_table->shead = NULL;
+new_table->stail = NULL;
+new_table->array = (shash_node_t **) malloc(sizeof(shash_node_t *) * size);
+if (new_table->array == NULL)
+{
+free(new_table);
+return (NULL);
+}
+for (index = 0; index < size; index++)
+(new_table->array)[index] = NULL;
+return (new_table);
 }
 
 /**
@@ -42,25 +42,25 @@ shash_table_t *shash_table_create(unsigned long int size)
  * Return: 1 or 0
  */
 int shash_sorted_list_update(shash_table_t **ht, shash_node_t **new_node,
-        const char *key, const char *value)
+const char *key, const char *value)
 {
-    shash_node_t *old_head = NULL;
+shash_node_t *old_head = NULL;
 
-    old_head = (*ht)->shead;
-    while (old_head)
-    {
-        if (strcmp(old_head->key, key) == 0)
-        {
-            free(old_head->value);
-            old_head->value = (char *) strdup(value);
-            free((*new_node)->key);
-            free((*new_node)->value);
-            free((*new_node));
-            return (1);
-        }
-        old_head = old_head->snext;
-    }
-    return (0);
+old_head = (*ht)->shead;
+while (old_head)
+{
+if (strcmp(old_head->key, key) == 0)
+{
+free(old_head->value);
+old_head->value = (char *) strdup(value);
+free((*new_node)->key);
+free((*new_node)->value);
+free((*new_node));
+return (1);
+}
+old_head = old_head->snext;
+}
+return (0);
 }
 
 /**
@@ -73,30 +73,30 @@ int shash_sorted_list_update(shash_table_t **ht, shash_node_t **new_node,
  * Return: 1 or 0
  */
 int shash_sorted_list_insert(shash_table_t **ht, shash_node_t **new_node,
-        const char *key)
+const char *key)
 {
-    shash_node_t *old_head = NULL;
+shash_node_t *old_head = NULL;
 
-    old_head = (*ht)->shead;
-    while (old_head)
-    {
-        if (strcmp(old_head->key, key) > 0)
-        {
-            (*new_node)->snext = old_head;
-            (*new_node)->sprev = old_head->sprev;
-            if (old_head->sprev != NULL)
-                old_head->sprev->snext = *new_node;
-            else
-                (*ht)->shead = *new_node;
-            old_head->sprev = *new_node;
-            return (1);
-        }
-        old_head = old_head->snext;
-    }
-    (*new_node)->sprev = (*ht)->stail;
-    (*ht)->stail->snext = *new_node;
-    (*ht)->stail = *new_node;
-    return (1);
+old_head = (*ht)->shead;
+while (old_head)
+{
+if (strcmp(old_head->key, key) > 0)
+{
+(*new_node)->snext = old_head;
+(*new_node)->sprev = old_head->sprev;
+if (old_head->sprev != NULL)
+old_head->sprev->snext = *new_node;
+else
+(*ht)->shead = *new_node;
+old_head->sprev = *new_node;
+return (1);
+}
+old_head = old_head->snext;
+}
+(*new_node)->sprev = (*ht)->stail;
+(*ht)->stail->snext = *new_node;
+(*ht)->stail = *new_node;
+return (1);
 }
 
 /**
@@ -109,29 +109,29 @@ int shash_sorted_list_insert(shash_table_t **ht, shash_node_t **new_node,
  * Return: 1 if success 0 if failure
  */
 int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
-        const char *value)
+const char *value)
 {
-    shash_node_t *new_node = NULL;
+shash_node_t *new_node = NULL;
 
-    new_node = (shash_node_t *) malloc(sizeof(shash_node_t));
-    if (new_node == NULL)
-        return (0);
-    new_node->key = (char *) strdup(key);
-    new_node->value = (char *) strdup(value);
-    new_node->next = new_node->snext = new_node->sprev = NULL;
-    if (ht->shead == NULL && ht->stail == NULL)
-    {
-        ht->shead = new_node;
-        ht->stail = new_node;
-        return (1);
-    }
-    else
-    {
-        if (!shash_sorted_list_update(&ht, &new_node, key, value))
-            return (shash_sorted_list_insert(&ht, &new_node, key));
-        else
-            return (1);
-    }
+new_node = (shash_node_t *) malloc(sizeof(shash_node_t));
+if (new_node == NULL)
+return (0);
+new_node->key = (char *) strdup(key);
+new_node->value = (char *) strdup(value);
+new_node->next = new_node->snext = new_node->sprev = NULL;
+if (ht->shead == NULL && ht->stail == NULL)
+{
+ht->shead = new_node;
+ht->stail = new_node;
+return (1);
+}
+else
+{
+if (!shash_sorted_list_update(&ht, &new_node, key, value))
+return (shash_sorted_list_insert(&ht, &new_node, key));
+else
+return (1);
+}
 }
 
 /**
@@ -146,45 +146,45 @@ int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
  * Return: 1 if success 0 if failure
  */
 int shash_insert_into_array(shash_table_t *ht, const char *key,
-        const char *value)
+const char *value)
 {
-    unsigned long int index = 0;
-    shash_node_t *new_node = NULL, *old_head = NULL;
+unsigned long int index = 0;
+shash_node_t *new_node = NULL, *old_head = NULL;
 
-    new_node = (shash_node_t *) malloc(sizeof(shash_node_t));
-    if (new_node == NULL)
-        return (0);
-    index = key_index((const unsigned char *) key, ht->size);
-    new_node->key = (char *) strdup(key);
-    new_node->value = (char *) strdup(value);
-    new_node->next = new_node->snext = new_node->sprev = NULL;
+new_node = (shash_node_t *) malloc(sizeof(shash_node_t));
+if (new_node == NULL)
+return (0);
+index = key_index((const unsigned char *) key, ht->size);
+new_node->key = (char *) strdup(key);
+new_node->value = (char *) strdup(value);
+new_node->next = new_node->snext = new_node->sprev = NULL;
 
-    if ((ht->array)[index] == NULL)
-    {
-        (ht->array)[index] = new_node;
-        return (1);
-    }
-    else
-    {
-        old_head = (ht->array)[index];
-        while (old_head)
-        {
-            if (strcmp(old_head->key, key) == 0)
-            {
-                free(old_head->value);
-                old_head->value = (char *) strdup(value);
-                free(new_node->key);
-                free(new_node->value);
-                free(new_node);
-                return (1);
-            }
-            old_head = old_head->next;
-        }
-        old_head = (ht->array)[index];
-        new_node->next = old_head;
-        (ht->array)[index] = new_node;
-        return (1);
-    }
+if ((ht->array)[index] == NULL)
+{
+(ht->array)[index] = new_node;
+return (1);
+}
+else
+{
+old_head = (ht->array)[index];
+while (old_head)
+{
+if (strcmp(old_head->key, key) == 0)
+{
+free(old_head->value);
+old_head->value = (char *) strdup(value);
+free(new_node->key);
+free(new_node->value);
+free(new_node);
+return (1);
+}
+old_head = old_head->next;
+}
+old_head = (ht->array)[index];
+new_node->next = old_head;
+(ht->array)[index] = new_node;
+return (1);
+}
 }
 
 /**
@@ -201,13 +201,13 @@ int shash_insert_into_array(shash_table_t *ht, const char *key,
 
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-    if (key == NULL || value == NULL || ht == NULL)
-        return (0);
-    if (strlen(key) == 0)
-        return (0);
-    if (!shash_insert_into_array(ht, key, value))
-        return (0);
-    return (shash_insert_into_sorted_list(ht, key, value));
+if (key == NULL || value == NULL || ht == NULL)
+return (0);
+if (strlen(key) == 0)
+return (0);
+if (!shash_insert_into_array(ht, key, value))
+return (0);
+return (shash_insert_into_sorted_list(ht, key, value));
 }
 
 /**
@@ -222,8 +222,8 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-    unsigned long int index;
-    shash_node_t *current_node;
+unsigned long int index;
+shash_node_t *current_node;
 
 if (ht == NULL || key == NULL)
 return (NULL);
