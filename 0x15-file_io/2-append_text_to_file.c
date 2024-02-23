@@ -4,7 +4,7 @@
 * _strlen - Find the length of a string.
 * @str: pointer to the string.
 *
-* Return: length
+* Return: file length
 */
 ssize_t _strlen(char *str)
 {
